@@ -11,4 +11,5 @@ const (
 	GatewayRejectionReasonFraud                 GatewayRejectionReason = "fraud"
 	GatewayRejectionReasonThreeDSecure          GatewayRejectionReason = "three_d_secure"
 	GatewayRejectionReasonUnrecognized          GatewayRejectionReason = "unrecognized"
+	GatewayRejectionReasonRiskThreshold         GatewayRejectionReason = "risk_threshold"
 )
