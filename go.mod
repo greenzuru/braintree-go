@@ -1,3 +1,3 @@
 module github.com/greenzuru/braintree-go
 
-go 1.14
+go 1.19
