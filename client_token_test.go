@@ -1,3 +1,4 @@
+//go:build unit
 // +build unit
 
 package braintree
@@ -6,7 +7,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/BoltApp/braintree-go/testhelpers"
+	"github.com/greenzuru/braintree-go/testhelpers"
 )
 
 func TestClientToken_MarshalXML(t *testing.T) {

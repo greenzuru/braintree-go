@@ -1,3 +1,4 @@
+//go:build integration
 // +build integration
 
 package braintree
@@ -11,7 +12,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/BoltApp/braintree-go/testhelpers"
+	"github.com/greenzuru/braintree-go/testhelpers"
 )
 
 // This test will fail unless you set up your Braintree sandbox account correctly. See TESTING.md for details.

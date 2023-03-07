@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/xml"
 
-	"github.com/BoltApp/braintree-go/date"
+	"github.com/greenzuru/braintree-go/date"
 )
 
 type Disbursement struct {

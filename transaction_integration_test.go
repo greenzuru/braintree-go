@@ -1,3 +1,4 @@
+//go:build integration
 // +build integration
 
 package braintree
@@ -12,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/BoltApp/braintree-go/testhelpers"
+	"github.com/greenzuru/braintree-go/testhelpers"
 )
 
 func randomAmount() *Decimal {
