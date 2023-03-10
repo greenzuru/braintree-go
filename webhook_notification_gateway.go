@@ -44,6 +44,17 @@ func (w *WebhookNotificationGateway) Parse(signature, payload string) (*WebhookN
 	return &n, nil
 }
 
+func (w *WebhookNotificationGateway) ParseRaw(signature, payload string) ([]byte, error) {
+	hmacer := newHmacer(w.apiKey.publicKey, w.apiKey.privateKey)
+	if verified, err := hmacer.verifySignature(signature, payload); err != nil {
+		return nil, err
+	} else if !verified {
+		return nil, SignatureError{}
+	}
+
+	return base64.StdEncoding.DecodeString(payload)
+}
+
 func (w *WebhookNotificationGateway) Verify(challenge string) (string, error) {
 	hmacer := newHmacer(w.apiKey.publicKey, w.apiKey.privateKey)
 	digest, err := hmacer.hmac(challenge)
